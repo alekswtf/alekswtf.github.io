@@ -20,7 +20,7 @@
 @media (max-width: 767px) {
     .prices {
         display: flex;
-        width: 382px;
+        width: 100%;
         padding: 25px 0 40px 0;
         flex-wrap: wrap;
         justify-content: center;

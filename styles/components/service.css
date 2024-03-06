@@ -18,9 +18,10 @@
 
 @media (max-width: 767px) {
     .service {
-        width: 380px;
+        width: 100%;
         height: 3150px;
         padding: 30px 51px 27px 25px;
+        align-items: center; 
     }
 }
 
