@@ -169,6 +169,7 @@
 
 @media (max-width: 767px) {
     .start_btn {
+        color: var( --color-black);
         width: 100px;
         height: 34.137px;
         font-size: 10px;

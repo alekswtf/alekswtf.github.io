@@ -69,16 +69,17 @@
         align-items:center;
         justify-content: center;
         position: fixed;
-        top: -100%;
-        left: 0;
+        top: 0;
+        left: 100%;
         z-index: 3;
         width: 100vw;
         height: 100vh;
         background-color: var(--color-light);
-        transition: all 2s ease-in-out;
+        transition: all 1s ease-in-out;
+        opacity: 92%;
     }
     .mobile-menu.active {
-        top: 0;
+        left: 0;
     }
 }
 
