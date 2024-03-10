@@ -56,3 +56,40 @@ mobileMenuLinks.forEach(el => {
     })
 })
 
+
+
+
+
+
+const buttons = document.querySelectorAll('.service-button');
+const cards = document.querySelectorAll('.service-item');
+
+let activeButtons = [];
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const serviceName = button.dataset.service;
+
+        // добавляем или удаляем класс active у кнопки
+        if(activeButtons.includes(serviceName)) {
+            button.classList.remove('active');
+            activeButtons = activeButtons.filter(name => name !== serviceName);
+        } else {
+            if (activeButtons.length < 2) {
+                button.classList.add('active');
+                activeButtons.push(serviceName);
+            }
+        }
+
+        // добавляем или удаляем класс blur у карточек
+        cards.forEach(card => {
+            if (!activeButtons.length) {
+                card.classList.remove('blur');
+            } else if (activeButtons.includes(card.dataset.service)) {
+                card.classList.remove('blur');
+            } else {
+                card.classList.add('blur');
+            }
+        });
+    });
+});

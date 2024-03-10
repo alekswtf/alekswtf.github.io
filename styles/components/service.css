@@ -112,6 +112,13 @@
     transition: all 0.3s ease-in-out;
 }
 
+.service-button.active {
+    font-weight: 400;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    transition: all 10s ease-in-out;
+}
+
 .service-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -140,6 +147,18 @@
     border-radius: 20px;
     border: 1px solid var(--color-borded);
 }
+
+/* .service-item img {
+    transition: filter 0.3s ease-in-out;
+  } */
+
+.service-item.blur {
+    filter: blur(3px);
+}  
+
+/* .service-item.blur .item-description {
+    visibility: hidden;
+} */
 
 @media (max-width: 1240px) {
     .service-item {
