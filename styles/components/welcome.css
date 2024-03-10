@@ -144,6 +144,7 @@
 
 
 .start_btn {  
+    color: var( --color-black);
     margin: 48px 367.44px 0 0;
     width: 158px;
     height: 44px;
