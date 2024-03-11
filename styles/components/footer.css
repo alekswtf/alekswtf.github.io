@@ -10,12 +10,19 @@
 @media (max-width: 1240px) {
     .footer-content {
         display: flex;
+        width: 100%;
         height: 181px;
         padding: 33px 0px 18px 0px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-content {
+        height: 100%;
     }
 }
 
@@ -27,10 +34,17 @@
 }
 
 @media (max-width: 1240px) {
-    .link-footer{
+    .link-footer {
     margin-top: 20px;
     }
 }
+
+@media (max-width: 767px) {
+    .link-footer {
+    margin-top: -15px;
+    }
+}
+
 
 .link-footer .link {
     width: 32px;

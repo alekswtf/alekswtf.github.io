@@ -110,6 +110,13 @@
     transition: all 0.2s ease-in-out;
 }
 
+@media  (max-width: 767px) {
+    .link {
+        line-height: 110px;
+        font-size: 25px;
+    }
+}
+
 .link:hover,
 .link.active {
     font-weight: 700;
