@@ -10,10 +10,10 @@
 @media (max-width: 1240px) {
     .prices {
         display: flex;
-        width: 768px;
-        padding: 40px 50px 88.02px 50px;
+        width: 100%;
         gap: 40px;
         margin: auto;
+        justify-content: center
     }
 }
 

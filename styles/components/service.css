@@ -8,10 +8,10 @@
 @media (max-width: 1240px) {
     .service {
         display: flex;
-        width: 768px;
+        width: 100%;
         padding: 60px 50px 70px 50px;
         flex-direction: column;
-        align-items: flex-start;   
+        align-items: center;   
         margin: auto;
     }
 }

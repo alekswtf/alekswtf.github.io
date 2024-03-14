@@ -10,9 +10,10 @@
     .welcome {
         display: flex;
         height: 420px;
-        width: 768px;
+        width: 100%;
         padding: 40px 50px 70px 50px;
         flex-direction: row-reverse;
+        justify-content: center;
     }
 }
 

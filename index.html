@@ -109,7 +109,7 @@
             <div class="service-card-container">
                 <div class="service-item" data-service="gardens">
                 
-                    <img src="./img/first.jpg" alt="item-picture1" class="garden-image active">
+                    <img src="./img/first.jpg" alt="item-picture1">
                     <div class="item-description">
                         <h3 class="item-title">Garden care</h3>
                         <p class="item-info">Lorem Ipsum has been the industry</p>
@@ -118,7 +118,7 @@
 
 
                 <div class="service-item"  data-service="planting">
-                    <img src="./img/first (1).jpg" alt="item-picture2" class="planting-image active">
+                    <img src="./img/first (1).jpg" alt="item-picture2">
                     <div class="item-description">
                         <h3 class="item-title">Planting</h3>
                         <p class="item-info">Lorem Ipsum has been the industry</p>
@@ -127,7 +127,7 @@
         
         
                 <div class="service-item"  data-service="lawn">
-                    <img src="./img/first (2).jpg" alt="item-picture3" class="lawn-image active">
+                    <img src="./img/first (2).jpg" alt="item-picture3">
                     <div class="item-description">
                         <h3 class="item-title">Lawn care</h3>
                         <p class="item-info">Lorem Ipsum has been the industry</p>
@@ -136,7 +136,7 @@
 
 
                 <div class="service-item"  data-service="planting">
-                    <img src="./img/first (3).jpg" alt="item-picture4" class="planting-image active">
+                    <img src="./img/first (3).jpg" alt="item-picture4">
                     <div class="item-description">
                         <h3 class="item-title">Planting</h3>
                         <p class="item-info">Lorem Ipsum has been the industry</p>
@@ -146,7 +146,7 @@
 
                 <div class="service-item"  data-service="gardens">
                     
-                    <img src="./img/first (4).jpg" alt="item-picture5" class="garden-image active">
+                    <img src="./img/first (4).jpg" alt="item-picture5">
                     <div class="item-description">
                         <h3 class="item-title">Garden care</h3>
                         <p class="item-info">Lorem Ipsum has been the industry</p>
@@ -155,7 +155,7 @@
 
 
                 <div class="service-item"  data-service="planting">
-                    <img src="./img/first (5).jpg" alt="item-picture6" class="planting-image active">
+                    <img src="./img/first (5).jpg" alt="item-picture6">
                     <div class="item-description">
                         <h3 class="item-title">Planting</h3>
                         <p class="item-info">Lorem Ipsum has been the industry</p>
@@ -201,29 +201,48 @@
 <div class="container">
     <section class="contacts" id="contacts">
         <div class="contact-woman">
-                <img src="./img/contact_woman 1.png" class="img_contacts" alt="contact_woman">
-        </div>   
-            <div class="contacts-title">
-                <h2>Contact us</h2>
+            <img src="./img/contact_woman 1.png" class="img_contacts" alt="contact_woman">
+        </div>
+        <div class="contacts-title">
+            <h2>Contact us</h2>
+        </div>
+        <div class="dropdown-label">
+            <div class="button-contacts">
+                <button class="btn-contact">
+                    <span class="selected-city"> City</span>
+                    <img src="./icons/accordion_btn.svg" alt="accordion-btn">
+                </button>
             </div>
-            <div class="dropdown-label">
-                <div class="button-contacts">
-                    <button class="btn-contact">
-                       <span> City</span> 
-                       <img src="./icons/accordion_btn.svg" alt="accordion-btn">
-                    </button>
-                </div>
-                <div class="dropdown-options">
-                    <div class="dropdown-options-inner">
-                        <span class="contacts-span option">Canandaigua, NY</span>
-                        <span class="contacts-span option">New York City</span>
-                        <span class="contacts-span option">Yonkers, NY</span>
-                        <span class="contacts-span option">Sherrill, NY</span>
-
-                    </div>
+            <div class="dropdown-options">
+                <div class="dropdown-options-inner">
+                    <span class="contacts-span option" data-city="Canandaigua, NY">Canandaigua, NY</span>
+                    <span class="contacts-span option" data-city="New York City">New York City</span>
+                    <span class="contacts-span option" data-city="Yonkers, NY">Yonkers, NY</span>
+                    <span class="contacts-span option" data-city="Sherrill, NY">Sherrill, NY</span>
                 </div>
             </div>
-
+            <!-- <div class="city-info hidden">
+                <div class="city-name-container">
+                  <span class="city-label">City:</span>
+                  <span class="city-name"></span>
+                </div>
+                <div class="city-phone-container">
+                  <span class="phone-label">Phone:</span>
+                  <span class="city-phone"></span>
+                </div>
+                <div class="city-address-container">
+                  <span class="address-label">Address:</span>
+                  <span class="city-address"></span>
+                </div>
+                <button class="btn-call-us">Call us</button>
+              </div> -->
+            <div class="city-info hidden">
+                <div class="city-name"></div>
+                <div class="city-phone"></div>
+                <div class="city-address"></div>
+                <button class="btn-call-us">Call us</button>
+            </div>
+        </div>
     </section>
 </div>
 

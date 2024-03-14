@@ -31,7 +31,7 @@
 @media  (max-width: 1240px) {
     .header {
         display: flex;
-        width: 768px;
+        width: 100%;
         padding: 35px 50px 35px 50px;
         border: none;
     }
