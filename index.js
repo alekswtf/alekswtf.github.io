@@ -150,6 +150,7 @@ const cityPhone = document.querySelector('.city-phone');
 const cityAddress = document.querySelector('.city-address');
 const selectedCity = document.querySelector('.selected-city');
 const callUsLink = document.querySelector('.call-us-link');
+const imageToHide = document.querySelector('.contact-woman');
 
 const cities = [
   {
@@ -218,6 +219,8 @@ option.forEach((el) => {
     options.classList.remove("open");
     label.classList.remove("active");
     label.querySelector('.btn-contact').classList.remove("active");
+
+    imageToHide.classList.add("hidden");
   });
 });
 
@@ -232,6 +235,7 @@ document.addEventListener("click", (e) => {
     if (!label.contains(e.target) && !options.contains(e.target)) {
       options.classList.remove("open");
       label.classList.remove("active");
+
     }
 });
 
@@ -243,14 +247,6 @@ callUsLink.addEventListener('click', (event) => {
 
 
 
-
-
-
-/* const imageToHide = document.querySelector('.contact-woman');
-
-
-cityInfo.classList.remove("hidden");
-imageToHide.classList.add("hide-on-mobile"); */
 
 
 

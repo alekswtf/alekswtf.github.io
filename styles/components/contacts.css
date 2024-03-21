@@ -24,9 +24,9 @@
         height: 445px;
         padding: 0;
         margin: auto;
+        display: flex;
         flex-direction: column-reverse;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 }
 
@@ -102,7 +102,7 @@
     flex-direction: column;
     width: 450px;
     height: 50px;
-    margin-top: 153px;
+    margin-top: 195px
 }
 
 
@@ -160,7 +160,9 @@
         width: 100px;
         height: 124.246px;
     }
-    .contact-woman.hide-on-mobile .img_contacts {
+}    
+@media (max-width: 767px) {
+    .contacts .contact-woman.hidden {
         display: none;
     }
 }
@@ -319,16 +321,3 @@
     }
 }
 
-/* .dropdown-label.selected .btn-contact {
-    background-color: #abdc8d; 
-    box-shadow: none;
-} */
-  
-
-/* .dropdown-label.hidden .btn-contact {
-    display: none;
-} */
-
-/* .active-icon {
-    transform: rotate(180deg);
-  }   */
