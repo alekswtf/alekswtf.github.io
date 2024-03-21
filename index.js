@@ -220,7 +220,9 @@ option.forEach((el) => {
     label.classList.remove("active");
     label.querySelector('.btn-contact').classList.remove("active");
 
-    imageToHide.classList.add("hidden");
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      imageToHide.classList.add("hidden");
+    }
   });
 });
 
