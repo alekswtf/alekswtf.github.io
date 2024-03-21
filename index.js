@@ -24,6 +24,22 @@ mobileMenuLinks.forEach(el => {
 
 
 
+document.querySelectorAll('.smooth-scroll').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+
+
+
+
 
 
 
@@ -133,6 +149,7 @@ const cityName = document.querySelector('.city-name');
 const cityPhone = document.querySelector('.city-phone');
 const cityAddress = document.querySelector('.city-address');
 const selectedCity = document.querySelector('.selected-city');
+const callUsLink = document.querySelector('.call-us-link');
 
 const cities = [
   {
@@ -157,59 +174,72 @@ const cities = [
   },
 ];
 
-label.addEventListener("click", () => {
+const btnContact = document.querySelector('.btn-contact');
+
+btnContact.addEventListener("click", () => { 
   options.classList.toggle("open");
 
-  const icon = label.querySelector('.btn-contact img');
+  const icon = label.querySelector('img');
   icon.classList.toggle('active-icon');
   icon.src = icon.classList.contains('active-icon')
-    ? '/icons/drop_btn.svg' 
-    : './icons/accordion_btn.svg'; 
+    ? '/icons/drop_btn.svg'
+    : './icons/accordion_btn.svg';
 
   label.classList.toggle("active");
+  
 });
 
+
 option.forEach((el) => {
-  el.addEventListener("click", () => {
+  el.addEventListener("click", (event) => {
+    event.stopPropagation();
     selectedCity.innerHTML = el.innerHTML;
     const selectedCityData = cities.find(
       (city) => city.name === el.getAttribute("data-city")
     );
-    cityName.innerHTML = `<span class="city-label"> City: </span> ${selectedCityData.name}`;
-    cityPhone.innerHTML = `<span class="phone-label"> Phone: </span> ${selectedCityData.phone}`;
-    cityAddress.innerHTML = `<span class="address-label"> Office address: </span> ${selectedCityData.adress}`;
+    cityName.innerHTML = `<div class="city-label"> City: </div> ${selectedCityData.name}`;
+    cityPhone.innerHTML = `<div class="phone-label"> Phone: </div> ${selectedCityData.phone}`;
+    cityAddress.innerHTML = `<div class="address-label"> Office address: </div> ${selectedCityData.adress}`;
     cityInfo.classList.remove("hidden");
+
+
+    callUsLink.href = `tel:${selectedCityData.phone}`;
+
 
     label.querySelector('.btn-contact span').innerHTML = selectedCity.innerHTML;
     label.classList.add("active");
     label.querySelector('.btn-contact').classList.add("selected"); 
+
 
     const icon = label.querySelector('.btn-contact img');
     icon.classList.add('active-icon');
     icon.src = '/icons/drop_btn.svg'; 
 
     options.classList.remove("open");
+    label.classList.remove("active");
+    label.querySelector('.btn-contact').classList.remove("active");
   });
 });
 
+
+document.querySelector('.btn-contact img').addEventListener('click', (e) => {
+  e.stopPropagation(); 
+  options.classList.remove("open");
+  label.classList.remove("active");
+});
 
 document.addEventListener("click", (e) => {
     if (!label.contains(e.target) && !options.contains(e.target)) {
       options.classList.remove("open");
       label.classList.remove("active");
-  
-      
-      if (selectedCity.textContent.trim()) {
-        const icon = label.querySelector('.btn-contact img');
-        icon.classList.add('active-icon');
-        icon.src = '/icons/drop_btn.svg'; 
-      } else {
-        const icon = label.querySelector('.btn-contact img');
-        icon.classList.remove('active-icon');
-        icon.src = './icons/accordion_btn.svg'; 
-      }
     }
-  });
+});
+
+callUsLink.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.location.href = event.currentTarget.href;
+});
+
 
 
 
@@ -222,3 +252,38 @@ document.addEventListener("click", (e) => {
 cityInfo.classList.remove("hidden");
 imageToHide.classList.add("hide-on-mobile"); */
 
+
+
+const pricesButtons = document.querySelectorAll('.prices-button');
+const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+pricesButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    dropdownMenus.forEach((menu, i) => {
+      if (index === i) {
+        menu.classList.toggle('open');
+      } else {
+        menu.classList.remove('open');
+      }
+    });
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.prices-button') && !e.target.closest('.dropdown-menu')) {
+    dropdownMenus.forEach((menu) => {
+      menu.classList.remove('open');
+    });
+  }
+});
+
+const dropdownButtons = document.querySelectorAll('.dropdown-button');
+
+dropdownButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const contactsSection = document.getElementById('contacts');
+    if (contactsSection) {
+      contactsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});

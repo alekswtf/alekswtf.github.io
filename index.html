@@ -27,11 +27,11 @@
     </div>
         <nav class="nav">
             <ul class="link-container">
-                <li class="menu_item"><a href="#" class="link" active>Home</a></li>
-                <li class="menu_item"><a href="#about" class="link">About us</a></li>
-                <li class="menu_item"><a href="#service" class="link">Service</a></li>
-                <li class="menu_item"><a href="#prices" class="link">Price</a></li>
-                <li class="menu_item"><a href="#contacts" class="link">Contacts</a></li>
+                <li class="menu_item"><a href="#" class="link active">Home</a></li>
+                <li class="menu_item"><a href="#about" class="link smooth-scroll">About us</a></li>
+                <li class="menu_item"><a href="#service" class="link smooth-scroll">Service</a></li>
+                <li class="menu_item"><a href="#prices" class="link smooth-scroll">Price</a></li>
+                <li class="menu_item"><a href="#contacts" class="link smooth-scroll">Contacts</a></li>
             </ul>
 
             <div class="hamburger">
@@ -43,11 +43,11 @@
             
                 <div class="mobile-menu">
                     <ul class="link-container-mobile">
-                        <li class="menu_item"><a href="#" class="link" active>Home</a></li>
-                        <li class="menu_item"><a href="#about" class="link">About us</a></li>
-                        <li class="menu_item"><a href="#service" class="link">Service</a></li>
-                        <li class="menu_item"><a href="#prices" class="link">Price</a></li>
-                        <li class="menu_item"><a href="#contacts" class="link">Contacts</a></li>
+                        <li class="menu_item"><a href="#" class="link active">Home</a></li>
+                        <li class="menu_item"><a href="#about" class="link smooth-scroll">About us</a></li>
+                        <li class="menu_item"><a href="#service" class="link smooth-scroll">Service</a></li>
+                        <li class="menu_item"><a href="#prices" class="link smooth-scroll">Price</a></li>
+                        <li class="menu_item"><a href="#contacts" class="link smooth-scroll">Contacts</a></li>
                     </ul>
                 </div>
             
@@ -175,14 +175,48 @@
     <section class="prices" id="prices">
         <div class="prices-wrapper">
             <h2>Prices</h2>
+
             <div class="prices-items">
                 <div class="prices-buttons-container">
-                    <button class="prices-button">Basics  <img src="./icons/accordion_btn.svg" alt="btn"></button>
-                    <button class="prices-button">Standart  <img src="./icons/accordion_btn.svg" alt="btn"></button>
-                    <button class="prices-button">Pro care  <img src="./icons/accordion_btn.svg" alt="btn"></button>
-
+                  <button class="prices-button">Basics <img src="./icons/accordion_btn.svg" alt="btn"></button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-content">
+                        Basics 
+                        
+                      <p>
+                        Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                      </p>
+                      <span>$15 / per hour</span>
+                      <button class="dropdown-button">Order</button>
+                    </div>
+                  </div>
+              
+                  <button class="prices-button">Standart  <img src="./icons/accordion_btn.svg" alt="btn"></button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-content">
+                        Standart     
+                      <p>
+                        Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                      </p>
+                      <span>$25 / per hour</span>
+                      <button class="dropdown-button">Order</button>
+                    </div>
+                  </div>
+              
+                  <button class="prices-button">Pro care  <img src="./icons/accordion_btn.svg" alt="btn"></button>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-content">
+                        Pro care 
+                      <p>
+                        Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                      </p>
+                      <span>$35 / per hour</span>
+                      <button class="dropdown-button">Order</button>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
+
         </div>
 
         <div class="prices-text">
@@ -215,32 +249,18 @@
             </div>
             <div class="dropdown-options">
                 <div class="dropdown-options-inner">
-                    <span class="contacts-span option" data-city="Canandaigua, NY">Canandaigua, NY</span>
-                    <span class="contacts-span option" data-city="New York City">New York City</span>
-                    <span class="contacts-span option" data-city="Yonkers, NY">Yonkers, NY</span>
-                    <span class="contacts-span option" data-city="Sherrill, NY">Sherrill, NY</span>
+                    <div class="contacts-span option" data-city="Canandaigua, NY">Canandaigua, NY</div>
+                    <div class="contacts-span option" data-city="New York City">New York City</div>
+                    <div class="contacts-span option" data-city="Yonkers, NY">Yonkers, NY</div>
+                    <div class="contacts-span option" data-city="Sherrill, NY">Sherrill, NY</div>
                 </div>
             </div>
-            <!-- <div class="city-info hidden">
-                <div class="city-name-container">
-                  <span class="city-label">City:</span>
-                  <span class="city-name"></span>
-                </div>
-                <div class="city-phone-container">
-                  <span class="phone-label">Phone:</span>
-                  <span class="city-phone"></span>
-                </div>
-                <div class="city-address-container">
-                  <span class="address-label">Address:</span>
-                  <span class="city-address"></span>
-                </div>
-                <button class="btn-call-us">Call us</button>
-              </div> -->
             <div class="city-info hidden">
                 <div class="city-name"></div>
                 <div class="city-phone"></div>
                 <div class="city-address"></div>
-                <button class="btn-call-us">Call us</button>
+                <button class="btn-call-us"><a href="#" class="call-us-link">Call us</a></button>
+
             </div>
         </div>
     </section>
