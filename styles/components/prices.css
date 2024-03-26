@@ -266,16 +266,16 @@
     max-height: 0;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease-in-out;
     cursor: pointer;
     margin-top: 21px;
     
 }
-@media (max-width: 767px) {
+
+/* @media (max-width: 767px) {
     .dropdown-menu{ 
         margin-top: 28px;
     }
-}
+} */
 
 .dropdown-menu.open {
     opacity: 1;
